@@ -1,0 +1,14 @@
+Example endpoint to return
+---
+parameters:
+  - name: type
+    in: path
+    type: string
+    enum: ['all', 'usd', 'eur']
+    required: true
+    default: all
+
+responses:
+  200:
+    description: json of cuerency
+
