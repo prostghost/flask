@@ -1,0 +1,17 @@
+tags:
+- name: user
+summary: Get the username
+parameters:
+- name: username
+  in: path
+  description: endpoint of profile
+  type: string
+  required: true
+  default: admin
+responses:
+  200:
+    description: json of user
+  400:
+    description: "Invalid username supplied"
+  404:  
+    description: "User not found"

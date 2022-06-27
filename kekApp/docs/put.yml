@@ -1,0 +1,36 @@
+tags:
+- name: PUT API
+summary: Put info
+parameters:
+  - name: todo_id
+    in: path
+    type: string
+    required: true
+    default: todo1
+  - name: body
+    in: body
+    required: true
+    schema:
+      $ref: "#/definitions/Put"
+
+responses:
+  200:
+    description: json of todos
+
+definitions:
+  Put:
+    type: object
+    properties:
+      todo_id:
+        type: string
+        example: todo1
+        enum: ['todo1', 'todo2', 'todo3']
+      todos:
+        type: object
+        properties:
+          task:
+            type: string
+            example: task
+          text:
+            type: string
+            example: Put is work

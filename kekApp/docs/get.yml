@@ -1,0 +1,14 @@
+tags:
+- name: GET API
+summary: Get info
+parameters:
+  - name: todo_id
+    in: path
+    type: string
+    enum: ['todo1', 'todo2', 'todo3']
+    required: true
+    default: todo1
+
+responses:
+  200:
+    description: json of todos

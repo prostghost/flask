@@ -1,5 +1,7 @@
 Example endpoint to return
 ---
+tags:
+- name: cuerency
 parameters:
   - name: type
     in: path

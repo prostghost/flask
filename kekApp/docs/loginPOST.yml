@@ -1,0 +1,35 @@
+tags:
+- name: user
+summary: "Create user"
+description: "This can only be done by the logged in user."
+operationId: "createUser"
+produces:
+- "application/xml"
+- "application/json"
+parameters:
+- in: "body"
+  name: "body"
+  description: "Created user object"
+  required: true
+  schema:
+    $ref: "#/definitions/User"
+responses:
+  default:
+    description: "successful operation"
+
+definitions:
+  User:
+    type: 'object'
+    properties:
+      username:
+        type: 'string'
+        example: admin
+      email:
+        type: 'string'
+        example: example@mail.ru
+      password:
+        type: 'string'
+        example: admin
+      userstatus:
+        type: 'int'
+        example: 0

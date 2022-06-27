@@ -1,0 +1,35 @@
+tags:
+- name: POST API
+summary: Post info
+parameters:
+  - name: todo_id
+    in: path
+    type: string
+    required: true
+    default: todo4
+  - name: body
+    in: body
+    required: true
+    schema:
+      $ref: "#/definitions/Post"
+
+responses:
+  200:
+    description: json of todos
+
+definitions:
+  Post:
+    type: object
+    properties:
+      todo_id:
+        type: string
+        example: todo4
+      todos:
+        type: object
+        properties:
+          task:
+            type: string
+            example: task
+          text:
+            type: string
+            example: new element
